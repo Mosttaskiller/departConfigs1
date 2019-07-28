@@ -6,47 +6,50 @@ spring:
   # 指定当前微服务对外暴漏的名称
   application: abcmsc-provider-depart
 
-  #配置spring-data-jps
-  jpa:
-    #启动时是否自动建表
-    generate-ddl: true
-    #是否再控制台显示sql语句
-    show-sql: true
-    #设置应用启动时，不重新建表
-    hibernate:
-      ddl-auto: none
+  #配置jpa
+  spring:
+    jpa:
+      #启动时是否自动建表
+      generate-ddl: true
+      #是否再控制台显示sql语句
+      show-sql: true
+      #设置应用启动时，不重新建表
+      hibernate:
+        ddl-auto: none
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       url: jdbc:mysql://39.100.94.59:3306/test?characterEncoding=UTF-8&allowMultiQueries=true
       username: trwl
       password: trwltrwl
 
-#配置日志显示格式
-#logging:
-#  pattern:
-#    console: level-%level %msg%n
-#  level:
-#    root: info #spring boot 启动时的日志级别
-#    org.hibernate: info #hibernate运行日志
-#    org.hibernate.type.descriptor.sql.BasicBinder: trace
-#    org.hibernate.type.descriptor.sql.BasicExtractor: trace
-#    com.kkb.provider8081: debug #自己代码的显示级别
-
-eureka:
-  client:
-    service-url: #指定eureka 服务注册中心
-      defaultZone: http://localhost:8400/eureka
-      #defaultZone: http://localhost:8100/eureka,http://localhost:8200/eureka,http://localhost:8300/eureka
-  #指定当前客户端在注册中心的名称
-  instance:
-    instance-id: xsl-provider-8085
-info:
-  company.name: www.kkb.com
-  company.address: China ZZ
-  company.tel: 1231313
-  app.name: kkb-msc
-  app.desc: mic-server-clound
-  aurthor: xxlong
+    #指定当前微服务对象暴漏的名称
+    application:
+      name: kkbmsc-provider-depart
+  #配置日志显示格式
+  logging:
+    pattern:
+      console: level-%level %msg%n
+    level:
+      root: info #spring boot 启动时的日志级别
+      org.hibernate: info #hibernate运行日志
+      org.hibernate.type.descriptor.sql.BasicBinder: trace
+      org.hibernate.type.descriptor.sql.BasicExtractor: trace
+      com.kkb.provider8081: debug #自己代码的显示级别
+  eureka:
+    client:
+      service-url: #指定eureka 服务注册中心
+        defaultZone: http://localhost:8400/eureka
+        #defaultZone: http://localhost:8100/eureka,http://localhost:8200/eureka,http://localhost:8300/eureka
+    #指定当前客户端在注册中心的名称
+    instance:
+      instance-id: xsl-provider-8081
+  info:
+    company.name: www.kkb.com
+    company.address: China ZZ
+    company.tel: 1231313
+    app.name: kkb-msc
+    app.desc: mic-server-clound
+    aurthor: xxlong
 
 ---
 # 配置test 环境
@@ -57,44 +60,47 @@ spring:
   # 指定当前微服务对外暴漏的名称
   application: abcmsc-provider-depart
 
-  #配置spring-data-jps
-  jpa:
-    #启动时是否自动建表
-    generate-ddl: true
-    #是否再控制台显示sql语句
-    show-sql: true
-    #设置应用启动时，不重新建表
-    hibernate:
-      ddl-auto: none
+  #配置jpa
+  spring:
+    jpa:
+      #启动时是否自动建表
+      generate-ddl: true
+      #是否再控制台显示sql语句
+      show-sql: true
+      #设置应用启动时，不重新建表
+      hibernate:
+        ddl-auto: none
     datasource:
       type: com.alibaba.druid.pool.DruidDataSource
       url: jdbc:mysql://39.100.94.59:3306/test?characterEncoding=UTF-8&allowMultiQueries=true
       username: trwl
       password: trwltrwl
 
-#配置日志显示格式
-logging:
-  pattern:
-    console: level-%level %msg%n
-  level:
-    root: info #spring boot 启动时的日志级别
-    org.hibernate: info #hibernate运行日志
-    org.hibernate.type.descriptor.sql.BasicBinder: trace
-    org.hibernate.type.descriptor.sql.BasicExtractor: trace
-    com.kkb.provider8081: debug #自己代码的显示级别
-
-eureka:
-  client:
-    service-url: #指定eureka 服务注册中心
-      defaultZone: http://localhost:8500/eureka
-      #defaultZone: http://localhost:8100/eureka,http://localhost:8200/eureka,http://localhost:8300/eureka
-  #指定当前客户端在注册中心的名称
-  instance:
-    instance-id: xsl-provider-8086
-info:
-  company.name: www.kkb.com
-  company.address: China ZZ
-  company.tel: 1231313
-  app.name: kkb-msc
-  app.desc: mic-server-clound
-  aurthor: xxlong
+    #指定当前微服务对象暴漏的名称
+    application:
+      name: kkbmsc-provider-depart
+  #配置日志显示格式
+  logging:
+    pattern:
+      console: level-%level %msg%n
+    level:
+      root: info #spring boot 启动时的日志级别
+      org.hibernate: info #hibernate运行日志
+      org.hibernate.type.descriptor.sql.BasicBinder: trace
+      org.hibernate.type.descriptor.sql.BasicExtractor: trace
+      com.kkb.provider8081: debug #自己代码的显示级别
+  eureka:
+    client:
+      service-url: #指定eureka 服务注册中心
+        defaultZone: http://localhost:8400/eureka
+        #defaultZone: http://localhost:8100/eureka,http://localhost:8200/eureka,http://localhost:8300/eureka
+    #指定当前客户端在注册中心的名称
+    instance:
+      instance-id: xsl-provider-8081
+  info:
+    company.name: www.kkb.com
+    company.address: China ZZ
+    company.tel: 1231313
+    app.name: kkb-msc
+    app.desc: mic-server-clound
+    aurthor: xxlong
