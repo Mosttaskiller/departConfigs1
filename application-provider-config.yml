@@ -3,7 +3,7 @@ spring:
   profiles: dev
   # 指定当前微服务对外暴漏的名称
   application:
-    name: abcmsc-provider-depart
+    name: abcmsc-provider-config
 server:
   port: 8085
   #配置jpa
@@ -22,9 +22,6 @@ server:
       username: trwl
       password: trwltrwl
 
-    #指定当前微服务对象暴漏的名称
-    application:
-      name: kkbmsc-provider-depart
   #配置日志显示格式
   logging:
     pattern:
@@ -59,7 +56,7 @@ spring:
   profiles: test
   # 指定当前微服务对外暴漏的名称
   application:
-    name: abcmsc-provider-depart
+    name: abcmsc-provider-config
 
   #配置jpa
   spring:
@@ -77,10 +74,6 @@ spring:
       url: jdbc:mysql://39.100.94.59:3306/test?characterEncoding=UTF-8&allowMultiQueries=true
       username: trwl
       password: trwltrwl
-
-    #指定当前微服务对象暴漏的名称
-    application:
-      name: kkbmsc-provider-depart
   #配置日志显示格式
   logging:
     pattern:
