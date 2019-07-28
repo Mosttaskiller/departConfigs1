@@ -1,0 +1,59 @@
+#配置dev环境
+server:
+  port: 7070
+spring:
+  profiles: dev
+  #指定当前微服务对外暴漏的名称
+  application:
+    name: abcmsc-consumer-depart
+eureka:
+  client:
+    service-url: #指定eureka 服务注册中心
+      defaultZone: http://localhost:8400/eureka
+      #defaultZone: http://localhost:8100/eureka,http://localhost:8200/eureka,http://localhost:8300/eureka
+  #指定当前客户端在注册中心的名称
+  instance:
+    instance-id: xsl-consumer-8084
+
+#开启feign 对Hystrix 的支持
+feign:
+  hystrix:
+    enabled: true
+#设置服务熔断时限，默认为1000毫秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+---
+#配置test环境
+server:
+  port: 7071
+spring:
+  profiles: test
+  #指定当前微服务对外暴漏的名称
+  application:
+    name: abcmsc-consumer-depart
+eureka:
+  client:
+    service-url: #指定eureka 服务注册中心
+      defaultZone: http://localhost:8500/eureka
+      #defaultZone: http://localhost:8100/eureka,http://localhost:8200/eureka,http://localhost:8300/eureka
+  #指定当前客户端在注册中心的名称
+  instance:
+    instance-id: xsl-consumer-8085
+
+#开启feign 对Hystrix 的支持
+feign:
+  hystrix:
+    enabled: true
+#设置服务熔断时限，默认为1000毫秒
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
