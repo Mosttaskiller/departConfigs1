@@ -22,15 +22,15 @@ spring:
       password: trwltrwl
 
 #配置日志显示格式
-logging:
-  pattern:
-    console: level-%level %msg%n
-  level:
-    root: info #spring boot 启动时的日志级别
-    org.hibernate: info #hibernate运行日志
-    org.hibernate.type.descriptor.sql.BasicBinder: trace
-    org.hibernate.type.descriptor.sql.BasicExtractor: trace
-    com.kkb.provider8081: debug #自己代码的显示级别
+#logging:
+#  pattern:
+#    console: level-%level %msg%n
+#  level:
+#    root: info #spring boot 启动时的日志级别
+#    org.hibernate: info #hibernate运行日志
+#    org.hibernate.type.descriptor.sql.BasicBinder: trace
+#    org.hibernate.type.descriptor.sql.BasicExtractor: trace
+#    com.kkb.provider8081: debug #自己代码的显示级别
 
 eureka:
   client:
