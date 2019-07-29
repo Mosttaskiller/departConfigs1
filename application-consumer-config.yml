@@ -1,11 +1,11 @@
 #配置dev环境
-server:
-  port: 7070
 spring:
   profiles: dev
   #指定当前微服务对外暴漏的名称
   application:
     name: abcmsc-consumer-depart
+server:
+  port: 7070
 eureka:
   client:
     service-url: #指定eureka 服务注册中心
@@ -29,13 +29,13 @@ hystrix:
             timeoutInMilliseconds: 5000
 ---
 #配置test环境
-server:
-  port: 7071
 spring:
   profiles: test
   #指定当前微服务对外暴漏的名称
   application:
     name: abcmsc-consumer-depart
+server:
+  port: 7071
 eureka:
   client:
     service-url: #指定eureka 服务注册中心
