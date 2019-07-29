@@ -1,11 +1,11 @@
 # 配置dev 环境
+server:
+  port: 8085
 spring:
   profiles: dev
   # 指定当前微服务对外暴漏的名称
   application:
     name: abcmsc-provider-config
-server:
-  port: 8085
   #配置jpa
   spring:
     jpa:
